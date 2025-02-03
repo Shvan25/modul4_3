@@ -15,7 +15,7 @@ class MainClass
             Console.Write(ch + " ");
         }
 
-        Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
+        Console.WriteLine("Первая буква вашего имени: {0}", name[0]);
 
         Console.ReadKey();
     }
