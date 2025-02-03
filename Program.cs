@@ -1,27 +1,22 @@
 ﻿using System;
 
-namespace FirstApp
+class MainClass
 {
-    class Program
+    public static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Console.WriteLine("Введите своё имя");
+
+        var name = Console.ReadLine();
+
+        Console.WriteLine("Ваше имя по буквам: ");
+
+        foreach (var ch in name)
         {
-            var numbers = new int[] { 6, 30, 7, 14, 2, 15 };
-            int minValue = 100000,
-            minIndex = -1;
-
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                if (numbers[i] < minValue)
-                {
-                    minValue = numbers[i];
-                    minIndex = i;
-                }
-            }
-
-            Console.WriteLine("Наименьший элемент массива имеет индекс {0}, значение этого элемента = {1}", minIndex, numbers[minIndex]);
-
-            Console.ReadKey();
+            Console.Write(ch + " ");
         }
+
+        Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
+
+        Console.ReadKey();
     }
 }
