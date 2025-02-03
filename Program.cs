@@ -4,19 +4,21 @@ class MainClass
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Введите своё имя");
+        int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
+        Console.WriteLine(array.Length);
 
-        var name = Console.ReadLine();
+        Console.Write("Количество строк: ");
+        Console.WriteLine(array.GetUpperBound(0) + 1 + " ");
 
-        Console.WriteLine("Ваше имя по буквам: ");
+        Console.Write("Количество колонок: ");
+        Console.WriteLine(array.GetUpperBound(1) + 1 + " ");
 
-        foreach (var ch in name)
+        for (int i = 0; i < array.GetUpperBound(0) + 1; i++)
         {
-            Console.Write(ch + " ");
+            for (int k = 0; k < array.GetUpperBound(1) + 1; k++)
+                Console.Write(array[i, k] + " ");
+
+            Console.WriteLine();
         }
-
-        Console.WriteLine("Первая буква вашего имени: {0}", name[0]);
-
-        Console.ReadKey();
     }
 }
